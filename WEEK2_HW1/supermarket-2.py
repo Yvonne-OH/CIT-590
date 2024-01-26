@@ -52,8 +52,11 @@ print(f"You have ${money} available")
 Need_lottery = input("First, do you want to buy a $2 lottery ticket for a chance at winning $2-$10? (y/n)")
 
 # Process the response for the lottery ticket
+# If Customer answer 'y' or 'Y', randomly generate a lottery 0-2
+# If lottery number==1, win, else, lose
 if Need_lottery.lower() == 'y':
     if money >= constant_lottery_unit_price:
+        # Process item and money 
         lottery_amount += 1
         money -= constant_lottery_unit_price
         money_spent += constant_lottery_unit_price

@@ -173,6 +173,7 @@ else:
 
 #__________________________________________________________________
 print()
+print("_"*20,"CIT 590","_"*20)
 print(f"Money left: ${money:.2f}")
 print(f"Lottery ticket(s) purchased: {lottery_amount}")
 print(f"Lottery winnings: ${winnings if lottery_amount > 0 else 0}")

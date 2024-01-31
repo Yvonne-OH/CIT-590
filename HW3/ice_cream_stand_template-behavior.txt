@@ -1,0 +1,105 @@
+Press any key to open the shop! 
+Welcome to Penn's Student Run Ice Cream Stand!
+
+Our current flavors for today are:
+Vanilla
+Chocolate
+Strawberry
+
+Our Small ice cream is $4.99
+Our Medium ice cream is $7.49
+Our Large ice cream is $8.49
+
+Num of customers in queue:  4
+
+Now serving customer: Judy
+Welcome Judy! How many ice creams will you be ordering (1 to 5)? 3
+Order No.: 1
+Which flavor would you like (v/c/s)? v
+Which size would you like (s/m/l)? S
+You ordered a Small Vanilla for $4.99
+Order No.: 2
+Which flavor would you like (v/c/s)? c
+Which size would you like (s/m/l)? m
+You ordered a Medium Chocolate for $7.49
+Order No.: 3
+Which flavor would you like (v/c/s)? S
+Which size would you like (s/m/l)? L
+You ordered a Large Strawberry for $8.49
+Your total bill is: $20.97
+Would you like to pay or cancel the order (p/c)? p
+
+We have now served 1 customer(s), and received $20.97 in revenue
+
+Now serving customer: Frank
+Welcome Frank! How many ice creams will you be ordering (1 to 5)? 
+Please enter a valid integer
+Welcome Frank! How many ice creams will you be ordering (1 to 5)? 0
+Welcome Frank! How many ice creams will you be ordering (1 to 5)? -5
+Welcome Frank! How many ice creams will you be ordering (1 to 5)? 6
+Welcome Frank! How many ice creams will you be ordering (1 to 5)? 3
+Order No.: 1
+Which flavor would you like (v/c/s)? 
+Which flavor would you like (v/c/s)? V. Above is an empty input
+Which size would you like (s/m/l)? 
+Which size would you like (s/m/l)? S. Above is an empty input
+You ordered a Small Vanilla for $4.99
+Order No.: 2
+Which flavor would you like (v/c/s)? small
+Which size would you like (s/m/l)? strawberry
+You ordered a Small Strawberry for $4.99
+Order No.: 3
+Which flavor would you like (v/c/s)? 		Spaces Leading
+Which size would you like (s/m/l)? 			Leading Spaces
+You ordered a Large Strawberry for $8.49
+Your total bill is: $18.47
+Would you like to pay or cancel the order (p/c)? 
+Would you like to pay or cancel the order (p/c)? C. Above is an empty input
+
+We have now served 2 customer(s), and received $20.97 in revenue
+
+Now serving customer: Alice
+Welcome Alice! How many ice creams will you be ordering (1 to 5)? 4
+Order No.: 1
+Which flavor would you like (v/c/s)? Cookies and Cream
+Which size would you like (s/m/l)? Super Large
+You ordered a Small Chocolate for $4.99
+Order No.: 2
+Which flavor would you like (v/c/s)? Very Rocky Road
+Which size would you like (s/m/l)? Big
+Which size would you like (s/m/l)? Very Big
+Which size would you like (s/m/l)? l
+You ordered a Large Vanilla for $8.49
+Order No.: 3
+Which flavor would you like (v/c/s)? Mint
+Which flavor would you like (v/c/s)? Mango
+Which flavor would you like (v/c/s)? S
+Which size would you like (s/m/l)? sSsS
+You ordered a Small Strawberry for $4.99
+Order No.: 4
+Which flavor would you like (v/c/s)? C
+Which size would you like (s/m/l)? MMM
+You ordered a Medium Chocolate for $7.49
+Your total bill is: $25.96
+Would you like to pay or cancel the order (p/c)? pppPPP
+
+We have now served 3 customer(s), and received $46.93 in revenue
+
+Now serving customer: Bob
+Welcome Bob! How many ice creams will you be ordering (1 to 5)? 1
+Order No.: 1
+Which flavor would you like (v/c/s)? v
+Which size would you like (s/m/l)? L
+You ordered a Large Vanilla for $8.49
+Your total bill is: $8.49
+Would you like to pay or cancel the order (p/c)? Not in the option
+Would you like to pay or cancel the order (p/c)? will prompt again
+Would you like to pay or cancel the order (p/c)? cancel
+
+We have now served 4 customer(s), and received $46.93 in revenue
+
+Customers served:  4
+Total revenue: $ 46.93
+Do you want to open again (y/n)? 
+Do you want to open again (y/n)? Above is an empty input
+Do you want to open again (y/n)? NO

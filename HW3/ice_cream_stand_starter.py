@@ -37,14 +37,14 @@ def print_welcome_and_menu(list_of_flavors, list_of_sizes, list_of_prices):
     # TODO: Write your code here
     # Welcome message
     print("Welcome to Penn's Student Run Ice Cream Stand!")
-    print()
+    print("_"*50)
     
     # Printing available flavors
     print("\nOur current flavors for today are:")
     for flavor in list_of_flavors:
         print(flavor)
     
-    print()
+    print("_"*50)
     
     for size, price in zip(list_of_sizes, list_of_prices):
         print(f"Our {size} ice cream is ${price:.2f}")
@@ -163,6 +163,7 @@ def take_customer_order(customer_name, ice_cream_flavors, ice_cream_sizes, ice_c
     total_bill = 0
 
     # TODO: Print a message "Now serving customer: X" where X is the current customer's name
+    print("_"*50)
     print(f"Now serving customer: {customer_name}")
 
     # TODO: Call the get_order_qty and save the value to order_qty
@@ -186,6 +187,7 @@ def take_customer_order(customer_name, ice_cream_flavors, ice_cream_sizes, ice_c
 
     # TODO: Print the customer's total_bill
     print(f"Your total bill is: ${total_bill:.2f}")
+    print("_"*50)
 
     # TODO: Once orders are all taken, the customer should be asked if they still want to Pay or Cancel
     #  "Would you like to pay or cancel the order (p/c)? "
@@ -367,7 +369,7 @@ def main():
            else:
                print("Invalid answer. Please respond with 'y' for yes or 'n' for no.")
                
-        if answer == "y":
+        if answer == "n":
             break
         else:
             pass

@@ -1,0 +1,154 @@
+Welcome to the WATER TANK game and play against the computer!
+Fill your tank by using or discarding a card for each turn.
+The first player to fill their tank wins the game.
+Good luck!
+
+The Computer Player has been selected to go first.
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  0
+Your water level is at:  0
+Computer playing with card:  10
+Computer's water level is now at:  10
+Your water level is now at:  0
+
+
+=== Human Player's turn ===
+Your water level is at:  0
+Computer's water level is at:  10
+Your cards are:  [5, 5, 10, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: 10
+Playing with card:  10
+Drawing water card:  1
+Your water level is now at:  10
+Computer's water level is now at:  10
+Your cards are now:  [1, 5, 5, 'DOT', 'SOH']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  10
+Your water level is at:  10
+Computer playing with card:  SOH
+Computer's water level is now at:  15
+Your water level is now at:  5
+
+
+=== Human Player's turn ===
+Your water level is at:  5
+Computer's water level is at:  15
+Your cards are:  [1, 5, 5, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: 5
+Playing with card:  5
+Drawing water card:  1
+Your water level is now at:  10
+Computer's water level is now at:  15
+Your cards are now:  [1, 1, 5, 'DOT', 'SOH']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  15
+Your water level is at:  10
+Computer playing with card:  DOT
+Computer's water level is now at:  15
+Your water level is now at:  0
+
+
+=== Human Player's turn ===
+Your water level is at:  0
+Computer's water level is at:  15
+Your cards are:  [1, 1, 5, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: 5
+Playing with card:  5
+Drawing water card:  10
+Your water level is now at:  5
+Computer's water level is now at:  15
+Your cards are now:  [1, 1, 10, 'DOT', 'SOH']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  15
+Your water level is at:  5
+Computer playing with card:  5
+Computer's water level is now at:  20
+Your water level is now at:  5
+
+
+=== Human Player's turn ===
+Your water level is at:  5
+Computer's water level is at:  20
+Your cards are:  [1, 1, 10, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: 10
+Playing with card:  10
+Drawing water card:  5
+Your water level is now at:  15
+Computer's water level is now at:  20
+Your cards are now:  [1, 1, 5, 'DOT', 'SOH']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  20
+Your water level is at:  15
+Computer playing with card:  SOH
+Computer's water level is now at:  27
+Your water level is now at:  8
+
+
+=== Human Player's turn ===
+Your water level is at:  8
+Computer's water level is at:  27
+Your cards are:  [1, 1, 5, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: 5
+Playing with card:  5
+Drawing water card:  1
+Your water level is now at:  13
+Computer's water level is now at:  27
+Your cards are now:  [1, 1, 1, 'DOT', 'SOH']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  27
+Your water level is at:  13
+Computer playing with card:  DMT
+Computer's water level is now at:  54
+Your water level is now at:  13
+
+
+=== Human Player's turn ===
+Your water level is at:  13
+Computer's water level is at:  54
+Your cards are:  [1, 1, 1, 'DOT', 'SOH']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: soh
+Playing with card:  SOH
+Drawing power card:  DMT
+Your water level is now at:  40
+Computer's water level is now at:  27
+Your cards are now:  [1, 1, 1, 'DMT', 'DOT']
+
+
+=== Computer Player's turn ===
+Computer's water level is at:  27
+Your water level is at:  40
+Computer playing with card:  DMT
+Computer's water level is now at:  54
+Your water level is now at:  40
+
+
+=== Human Player's turn ===
+Your water level is at:  40
+Computer's water level is at:  54
+Your cards are:  [1, 1, 1, 'DMT', 'DOT']
+Do you want to use a card or discard a card? (u / d): u
+Which card do you want to use?: Dmt
+Playing with card:  DMT
+Your water level is now at:  80
+
+
+=== Game Over ===
+Human  Player won

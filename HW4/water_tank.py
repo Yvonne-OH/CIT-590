@@ -363,6 +363,9 @@ def main():
     
     # Main game loop
     while True:  #
+            
+
+    
         if turn == 'human':
             human_tank, computer_tank = human_play(human_tank, human_cards, water_cards_pile, power_cards_pile, computer_tank)
             turn = 'computer'  # Switch turn
@@ -372,13 +375,13 @@ def main():
             turn = 'human'  # Switch turn
             print()
         
+        check_pile(water_cards_pile, "water") 
+        check_pile(power_cards_pile, "power")
+        
 
         if filled_tank(human_tank) or filled_tank(computer_tank):
             break
-        
-        check_pile(water_cards_pile, "water") 
-        check_pile(water_cards_pile, "power")
-    
+
     # Determine winner
     if human_tank > computer_tank:
         print("Human wins!")

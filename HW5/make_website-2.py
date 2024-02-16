@@ -38,7 +38,57 @@ def generate_html(txt_input_file, html_output_file):
     """
 
     # insert code
+    input_file=read_file(txt_input_file)
+    print (input_file)
+    extract_name(input_file)
+    extract_email(input_file)
     pass
+
+def read_file(file_path):
+    """
+    Reads a file and returns its content as a list of lines.
+    """
+    with open(file_path, 'r') as file:
+        return file.readlines()
+    
+def extract_name(file_lines):
+    """
+    Extracts the name from the first line of the file.
+    If the first character is not an uppercase letter, returns 'Invalid Name'.
+    Removes leading or trailing whitespace.
+    """
+    if not file_lines:  # Check if the file_lines list is empty
+        print("Empty File!")
+        return 'Invalid Name'
+    
+    name = file_lines[0].strip()  # Remove leading/trailing whitespace
+    
+    # Check if the first character is uppercase and the name is not empty
+    if name and name[0].isupper():
+        print ("Name:", name)
+        return name
+    else:
+        print ("Not Uppercase Letter Name!")
+        return 'Invalid Name'
+    
+def extract_email(file_lines):
+    """
+    Detect and return the email address
+    """
+    for line in file_lines:
+        email = line.strip()                                     # Remove leading/trailing whitespace
+        if '@' in email and (email.endswith('.com') or email.endswith('.edu')):
+            at_index = email.index('@')
+            local_part = email[:at_index]
+            domain_part = email[at_index+1:]
+            if any(char.isdigit() for char in email):            # Check for digits
+                continue                                         # Skip if there are digits
+            if not any(char.islower() for char in domain_part):  # Check for lowercase after '@'
+                continue                                         # Skip if there are digits
+            print("email: ",email)
+            return email
+    return ''                                                # Return empty string 
+
 
 def main():
 

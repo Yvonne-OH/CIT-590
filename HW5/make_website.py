@@ -104,22 +104,25 @@ def extract_email(file_lines):
             return email
     return ''                                                # Return empty string 
 
-
 def extract_courses(file_lines):
     """
-    Detect and return the courses
+    Detect and return the courses 
     """
     courses_list = []
     for line in file_lines:
-        normalized_line = line.strip().lower()
-        if 'courses' in normalized_line:         
-            parts = line.split(":-", 1) # split the line at ":-" 
+        normalized_line = line.strip()
+        if 'courses' in normalized_line.lower():
+            parts = normalized_line.split(":-", 1)              # Split the line at ":-"
             if len(parts) > 1:
-                # split the courses part by commas
-                courses = [course.strip() for course in parts[1].split(',')]
-                print("Courses: ",courses)
-                return courses          # Return the list course
-    return []                           # Return an empty list 
+                courses_str = parts[1].lstrip(' _-#$&^!*()')    # Remove leading non-alphabetical characters manually
+                                                                # Find the index where the first alphabetical character occurs
+                idx = next((i for i, char in enumerate(courses_str) if char.isalpha()), None)
+                if idx is not None:
+                    courses_str = courses_str[idx:]             # Split the courses part by commas and strip each course name             
+                courses = [course.strip() for course in courses_str.split(',') if course.strip()]
+                courses_list = [course for course in courses if course[0].isalpha()]    # Ensure each course name starts with an alphabetic character
+                return courses_list
+    return []  # Return an empty list if no courses are found
     
             
 def extract_projects(file_lines):
@@ -185,13 +188,13 @@ def main():
     # DO NOT REMOVE OR UPDATE THIS CODE.
     # Uncomment each call to the generate_html function when you’re ready
     # to test how your program handles each additional test resume.txt file
-    #generate_html('TestResumes/resume_bad_name_lowercase/resume.txt', 'TestResumes/resume_bad_name_lowercase/resume.html')
-    #generate_html('TestResumes/resume_courses_w_whitespace/resume.txt', 'TestResumes/resume_courses_w_whitespace/resume.html')
-    #generate_html('TestResumes/resume_courses_weird_punc/resume.txt', 'TestResumes/resume_courses_weird_punc/resume.html')
-    #generate_html('TestResumes/resume_projects_w_whitespace/resume.txt', 'TestResumes/resume_projects_w_whitespace/resume.html')
-    #generate_html('TestResumes/resume_projects_with_blanks/resume.txt', 'TestResumes/resume_projects_with_blanks/resume.html')
-    #generate_html('TestResumes/resume_template_email_w_whitespace/resume.txt', 'TestResumes/resume_template_email_w_whitespace/resume.html')
-    #generate_html('TestResumes/resume_wrong_email/resume.txt', 'TestResumes/resume_wrong_email/resume.html')
+    generate_html('TestResumes/resume_bad_name_lowercase/resume.txt', 'TestResumes/resume_bad_name_lowercase/resume.html')
+    generate_html('TestResumes/resume_courses_w_whitespace/resume.txt', 'TestResumes/resume_courses_w_whitespace/resume.html')
+    generate_html('TestResumes/resume_courses_weird_punc/resume.txt', 'TestResumes/resume_courses_weird_punc/resume.html')
+    generate_html('TestResumes/resume_projects_w_whitespace/resume.txt', 'TestResumes/resume_projects_w_whitespace/resume.html')
+    generate_html('TestResumes/resume_projects_with_blanks/resume.txt', 'TestResumes/resume_projects_with_blanks/resume.html')
+    generate_html('TestResumes/resume_template_email_w_whitespace/resume.txt', 'TestResumes/resume_template_email_w_whitespace/resume.html')
+    generate_html('TestResumes/resume_wrong_email/resume.txt', 'TestResumes/resume_wrong_email/resume.html')
 
     # If you want to test additional resume files, call the generate_html function with the given .txt file
     # and desired name of output .html file

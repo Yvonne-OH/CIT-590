@@ -1,0 +1,7 @@
+I.M. Student
+Courses :- Programming Languages and Techniques, Biomedical image analysis, Software Engineering
+Projects
+CancerDetector.com, New Jersey, USA - Project manager, codified the assessment and mapped it to the CancerDetector ontology. Member of the UI design team, designed the portfolio builder UI and category search pages UI. Reviewed existing rank order and developed new search rank order approach.
+Biomedical Imaging - Developed a semi-automatic image mosaic program based on SIFT algorithm (using Matlab)
+------------------------------
+tonyl@seas.upenn.edu

@@ -4,7 +4,7 @@ def surround_block(tag, text):
     """
 
     # insert code
-    pass
+    return f'<{tag}>{text}</{tag}>'
 
 def create_email_link(email_address):
     """
@@ -20,7 +20,13 @@ def create_email_link(email_address):
     """
 
     # insert code
-    pass
+    # Check if the email address contains an '@'
+    if '@' in email_address:
+        display_email = email_address.replace('@', '[aT]')
+    else:
+        display_email = email_address
+
+    return f'<a href="mailto:{email_address}">{display_email}</a>'
 
 def generate_html(txt_input_file, html_output_file):
     """
@@ -40,10 +46,17 @@ def generate_html(txt_input_file, html_output_file):
     # insert code
     input_file=read_file(txt_input_file)
     print (input_file)
-    extract_name(input_file)
-    extract_email(input_file)
-    extract_courses(input_file)
-    extract_projects(input_file)
+    name = extract_name(input_file)
+    email = extract_email(input_file)
+    courses = extract_courses(input_file)
+    projects = extract_projects(input_file)
+    
+    with open(html_output_file, 'w') as file:
+       start_page_wrap(file)
+       write_basic_info(file, name, email)
+       write_projects(file, projects)
+       write_courses(file, courses)
+       end_page(file)
     pass
 
 def read_file(file_path):
@@ -127,6 +140,40 @@ def extract_projects(file_lines):
             projects.append(line.strip())
     print("Projects:", projects)
     return projects
+
+def surround_block(tag, text):
+    return f'<{tag}>{text}</{tag}>'
+
+def start_page_wrap(file):
+    file.write('<div id="page-wrap">\n')
+
+def write_basic_info(file, name, email):
+    file.write('<div>\n')
+    file.write(surround_block('h1', name) + '\n')
+    email_link = create_email_link(email)
+    file.write(surround_block('p', 'Email: ' + email_link) + '\n')
+    file.write('</div>\n')
+
+def write_projects(file, projects):
+    file.write('<div>\n')
+    file.write(surround_block('h2', 'Projects') + '\n')
+    file.write('<ul>\n')
+    for project in projects:
+        file.write(surround_block('li', project) + '\n')
+    file.write('</ul>\n')
+    file.write('</div>\n')
+
+def write_courses(file, courses):
+    file.write('<div>\n')
+    file.write(surround_block('h3', 'Courses') + '\n')
+    courses_str = ', '.join(courses)  # Join the list of courses into a single string
+    file.write(surround_block('span', courses_str) + '\n')
+    file.write('</div>\n')
+
+def end_page(file):
+    file.write('</div>\n</body>\n</html>')
+
+
 
 
 def main():

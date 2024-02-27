@@ -1,0 +1,200 @@
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? food
+food: 5.00
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? coffee
+coffee: 12.40
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? wrongtype
+Sorry, that expense type doesn't exist.
+None
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+2
+Expense type? coffee
+Amount to add? 2.43
+coffee: 14.83
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? coffee
+coffee: 14.83
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+3
+Expense type? coffee
+Amount to deduct? 5
+coffee: 9.83
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? entertainment
+entertainment: 135.62
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+4
+Expense type? entertainment
+Amount to update expense to? 125.23
+entertainment: 125.23
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? boba
+Sorry, that expense type doesn't exist.
+None
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+4
+Expense type? boba
+Amount to update expense to? 10
+Sorry, that expense type doesn't exist.
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+1
+Expense type? entertainment
+entertainment: 125.23
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+5
+What type of sort? ('expense_type' or 'amount') amount
+[('rent', 825.0), ('music', 324.0), ('entertainment', 125.23), ('clothes', 45.0), ('family', 32.45), ('coffee', 9.83), ('food', 5.0)]
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+5
+What type of sort? ('expense_type' or 'amount') expense_type
+[('clothes', 45.0), ('coffee', 9.83), ('entertainment', 125.23), ('family', 32.45), ('food', 5.0), ('music', 324.0), ('rent', 825.0)]
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+6
+Name of file to export to?template.txt
+What expense type you want to export? Input N to quit: coffee
+What expense type you want to export? Input N to quit: N
+
+Welcome to the expense management system!  What would you like to do?
+1: Get expense info
+2: Add an expense
+3: Deduct an expense
+4: Update an expense
+5: Sort expenses
+6: Export expenses
+0: Exit the system
+
+0
+Good bye!

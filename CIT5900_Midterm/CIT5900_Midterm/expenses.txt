@@ -1,0 +1,13 @@
+food: 5
+coffee: 1.89
+phone:
+rent: 825
+clothes: 45
+     entertainment:       10
+coffee: 3.25
+entertainment:   125.62
+coffee: 2.43
+
+
+
+

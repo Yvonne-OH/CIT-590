@@ -41,4 +41,22 @@ class ExpensesLoader(object):
         """
 
         # TODO insert your code
-        raise NotImplementedError  # remove this line and replace with your code
+        with open(file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue  # Skip empty lines
+                parts = line.split(':')
+                if len(parts) != 2:
+                    continue  # Skip lines that don't have exactly two parts
+                expense_type, amount_str = parts[0].strip(), parts[1].strip()
+                try:
+                    amount = float(amount_str)
+                except ValueError:
+                    continue  # Skip lines where the amount isn't a number
+                
+                if expense_type in expenses:
+                    expenses[expense_type].amount += amount
+                else:
+                    expenses[expense_type] = Expense(expense_type, amount)
+        #raise NotImplementedError  # remove this line and replace with your code

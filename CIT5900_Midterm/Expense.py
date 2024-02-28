@@ -16,7 +16,7 @@ class Expense(object):
         """
 
         # TODO insert your code
-        raise NotImplementedError  # remove this line and replace with your code
+        self.amount += amount
 
     def deduct_amount(self, amount):
         """Deducts the given amount from the total amount of the expense.
@@ -24,7 +24,7 @@ class Expense(object):
         """
 
         # TODO insert your code
-        raise NotImplementedError  # remove this line and replace with your code
+        self.amount -= amount
 
     def __str__(self):
         """Returns string representation of expense, aimed at the user.

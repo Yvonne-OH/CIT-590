@@ -75,10 +75,10 @@ class ExpensesManager(object):
             return
         
         expense = expenses[expense_type] # Retrieve the Expense object
-      
+
         if value > expense.amount: # Check if the given value is greater than the existing amount
             raise RuntimeError(f"The given value {value} is greater than the existing amount {expense.amount} for {expense_type}.")
-    
+        
         expense.amount -= value # Deduct the value from the Expense object's amount
     
         print(f"Updated Expense: {expense_type} : ${expense.amount:.2f}")

@@ -71,6 +71,7 @@ public class HelloWorld {
         int num = scanner.nextInt();
 
         if (num == 1) { // Handling the special case of 1
+        	System.out.println("1.");
             System.out.println("1 is neither prime nor composite.");
         } else {
             // Check if num is prime or composite

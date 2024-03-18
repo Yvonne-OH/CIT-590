@@ -51,21 +51,71 @@ public class GameControl {
      * - Print the final results
 	 * @param sc to use for getting user input
 	 */
+
 	public void run(Scanner sc) {
-        System.out.println("Enter the name for the human player:");
-        String humanName = sc.nextLine();
-        createPlayers(humanName);
-        while (!checkWinningStatus()) {
-            System.out.println(human.getName() + "'s turn:");
-            human.move(computer, random, sc);
-            if (checkWinningStatus()) break;
-            System.out.println("Computer's turn:");
-            computer.move(human, random);
-        }
-        printResults();
-        printWinner();
-		
+	    // Prompt the user for the human player's name and read it from the input.
+	    System.out.println("Enter the name for the human player:");
+	    String humanName = sc.nextLine();
+
+	    // Initialize game players using the provided human player name.
+	    createPlayers(humanName);
+
+	    // Flags to track if the computer or human player has reached a score of 50, and whether an additional turn is needed.
+	    boolean computerReached50 = false;
+	    boolean humanReached50 = false;
+	    boolean additionalTurn = false;
+
+	    // Main game loop continues until a winning condition is met or an additional turn is needed.
+	    while (!checkWinningStatus() || additionalTurn) {
+	        // Computer's turn to play if it hasn't reached 50 points, or if it's the only player to have reached 50.
+	        if (!computerReached50 || (computerReached50 && !humanReached50)) {
+	            System.out.println("---------------------------");
+	            System.out.println("Computer's turn:");
+	            int computerScoreThisRound = computer.move(human, random); // Computer makes its move.
+	            // Print out the computer's score for this round and its total score.
+	            System.out.println("Computer's score in this round: " + computerScoreThisRound);
+	            System.out.println("Computer's total score is: " + computer.getScore());
+	            System.out.println("---------------------------");
+	            // Check if the computer has reached 50 points.
+	            if (computer.getScore() >= 50) {
+	                computerReached50 = true;
+	            }
+	        }
+
+	        // Human player's turn to play if the game hasn't been won or if the computer has reached 50 points.
+	        if (!checkWinningStatus() || computerReached50) {
+	            System.out.println("---------------------------");
+	            System.out.println(human.getName() + "'s turn:");
+	            int humanScoreThisRound = human.move(computer, random, sc); // Human makes their move.
+	            // Print out the human's score for this round and their total score.
+	            System.out.println(human.getName() + "'s score in this round: " + humanScoreThisRound);
+	            System.out.println(human.getName() + "'s total score is: " + human.getScore());
+	            System.out.println("---------------------------");
+	            // Check if the human has reached 50 points.
+	            if (human.getScore() >= 50) {
+	                humanReached50 = true;
+	            }
+	        }
+
+	        // Determine if an additional turn is warranted based on the game's rules.
+	        additionalTurn = false; // Reset the flag for additional turn.
+	        if (computerReached50 && !humanReached50) {
+	            // If the computer reached 50 first and the human hasn't had an additional turn.
+	            additionalTurn = true;
+	            humanReached50 = true; // Mark that the human is getting an additional turn.
+	        } else if (humanReached50 && computerReached50) {
+	            // If both have reached 50 or more, and the scores are tied.
+	            if (human.getScore() == computer.getScore()) {
+	                additionalTurn = true; // Continue the game until the tie is broken.
+	            }
+	        }
+	    }
+
+	    // Once the game loop ends, print the final results and announce the winner.
+	    printResults();
+	    printWinner();
 	}
+
 	
 	/**
      * Creates one human player with the given humanName, and one computer player with a name.
@@ -88,23 +138,29 @@ public class GameControl {
 	 * Prints the final scores of the human player and computer player
 	 */
 	public void printResults() {
-		System.out.println("Final scores:");
-        System.out.println(human.getName() + ": " + human.getScore());
-	    System.out.println("Computer: " + computer.getScore());
+	    // Print the header row.
+	    System.out.printf("%-20s %s%n", "Player", "Score");
+	    // Print a separator for clarity.
+	    System.out.println("---------------------------");
+	    // Print the scores for the human and computer players, aligning text to the left.
+	    System.out.printf("%-20s %d%n", human.getName(), human.getScore());
+	    System.out.printf("%-20s %d%n", "Computer", computer.getScore());
 	}
+
 	
 	/**
      * Determines who won the game, and prints the results
      */
 	public void printWinner() {
-		if (human.getScore() > computer.getScore()) {
-            System.out.println(human.getName() + " wins!");
-        } else if (computer.getScore() > human.getScore()) {
-            System.out.println("Computer wins!");
-        } else {
-            System.out.println("It's a tie!");
-        }
-
+	    if (human.getScore() > 50 && computer.getScore() > 50) {
+	        System.out.println("It's a tie!"); // If both players score above 50, it's a tie.
+	    } else if (human.getScore() > computer.getScore()) {
+	        System.out.println(human.getName() + " wins!");
+	    } else if (computer.getScore() > human.getScore()) {
+	        System.out.println("Computer wins!");
+	    } else {
+	        System.out.println("Game Continue"); // Covers the case where both scores are equal and not necessarily above 50.
+	    }
 	}
 	
 	/**

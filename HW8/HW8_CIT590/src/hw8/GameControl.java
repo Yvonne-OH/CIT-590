@@ -131,8 +131,16 @@ public class GameControl {
      * @return true if one player has won the game
      */
 	public boolean checkWinningStatus() {
-		return human.getScore() >= 50 || computer.getScore() >= 50;
+	    // Check if both players have scores greater than or equal to 50
+	    if (human.getScore() >= 50 && computer.getScore() >= 50) {
+	        // Return true if one score is greater than the other, indicating a win
+	        return human.getScore() != computer.getScore();
+	    }
+	    // Otherwise, return true if either player has a score greater than or equal to 50
+	    return human.getScore() >= 50 || computer.getScore() >= 50;
 	}
+
+
 	
 	/**
 	 * Prints the final scores of the human player and computer player

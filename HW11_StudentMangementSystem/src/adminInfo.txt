@@ -1,3 +1,0 @@
-001; admin; admin01; password590
-002; admin; admin02; password590
-003; admin; admin03; password590
